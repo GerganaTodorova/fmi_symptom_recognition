@@ -1,0 +1,5 @@
+{
+  "overwrite":true,
+  "phrase_matcher_attr":"LEMMA",
+  "ent_id_sep":"||"
+}
