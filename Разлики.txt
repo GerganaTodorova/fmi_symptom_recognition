@@ -1,0 +1,63 @@
+1) 4 SYMPTOM, 3 COMPLAINT,  + 1 непълен (стягане || стягане в сърдечната област COMPLAINT)
+
+2) 2 COMPLAINT, 2 SYMPTOM, 1 непълно (майка с ах и зд|майка с ах и зд втори тип FAMILY_HISTORY)
+
+3) 8 COMPLAINT, 2 SYMPTOM
+
+4) 4 COMPLAINT
+
+5) 1 RISK_FACTOR, 3 COMPLAINT, 2 SYMPTOM 1 nepylen SYMPTOM(полип на бронха| полип на бронха на кулман), 1 NEGATION, 1 ORGAN,  ('болка в лява гръдна половина', 417, 445, 'COMPLAINT'), ('ирадиация към гърба', 448, 467, 'SYMPTOM') = ('болка в лява гръдна половина с ирадиация към гърба', 417, 467, 'COMPLAINT')
+
+6) 2 COMPLAINT,  1 NEGATION, 2 SYMPTOM, ларинкс(Organ) -> са на ларинкс(SYMPTOM), непълен симптом (захарен диабет = захарен диабет тип 2), 1 RISK_FACTOR, ГРЕШЕН FAMILY_HISTORY('фамилна обремененост за ссз', 332, 359, 'FAMILY_HISTORY') - НЕ ТРЯБВА ДА СЕ БРОЙ ЗАЩОТО ИМА ОТРИЦАНИЕ
+
+7) 6 COMPLAINT, 1 ПРОПУСНАТ RISK_FACTOR(дългогодишна злоупотреба с цигари)
+
+8) 3 COMPLAINT, 1 NO_COMPLAINT,1 ORGAN, 1 SYMPTOM , НЕПЪЛЕН SYMPTOM карцином | карцином на маточната тръба
+
+9) COMPLAINT - НЕПЪЛНО болка,корема -> болка в горната част на корема, 1 ORGAN, 2 g, ('еднократно повърнала', 194, 214, 'COMPLAINT') - ЛИПСВА, 1 NO_COMPLAINT,
+ НЯМАЛА | нямала връщане на храна (NO_COMPLAINT),
+ ('корема', 261, 267, 'ORGAN'), ('не', 270, 272, 'NEGATION') -> ('корема и не се подувал', 261, 283, 'NO_COMPLAINT'), 1 COMPLAINT, 
+ ('нямал', 311, 316, 'NEGATION'),('кръв', 317, 321, 'ORGAN'), ('слуз', 324, 328, 'ORGAN') _>('нямал кръв и слуз в фекалиите', 311, 340, 'NO_COMPLAINT'),
+ нЕПЪЛНО хепатит -> б хепатит SYMPTOM, 1 NEGATION
+
+10) 6 SYMPTOM, 1 COMPLAINT, 1 ORGAN, ПРОПУСНАТ SYMPTOM'макроглобулия на валденстрьом', 
+
+11) 12 COMPLAINT, 1 organ, , НЕПЪЛЕН / МОЖЕ БИ ГРЕШЕН COMPLAINT(неспокоен -> неспокоен сьн), НАМИРА САМО ОРГАНА - дясната тазобедрена става -> пада и се наранява в областта на дясната тазобедрена става(COMPLAINT)
+
+12) 3 SYMPTOM, 1 COMPLAINT, 1 sYMPTOM стеноза на аортната клапа -> САМО  аортната клапа, ЛИПСВА генерализирана остеоартроза - SYMPTOM, ЛИПСВА гр . стълб - ОРГАн, 1 organ, 1 FAMILY_HISTORY, 1 ПРОПУСНАто FAMILY_HISTORY (сестра на инсулинолечение)
+
+13) 1 SYMPTOM, 2 COMPLAINT, НЕ ПЪЛНО COMPLAINT походка -> нестаб . походка , ПРОПУСНАТ метастази
+
+14) 3 COMPLAINT, НЕПЪЛНО COMPLAINT изтръпване-> изтръпване на крайниците
+
+15) 3 COMPLAINT, 1 FAMILY_HISTORY, 1 SYMPTOM
+
+16) 3 COMPLAINT, непълно COMPLAINT мравучкане-> мравучкане по задна повърхност на бедрото
+
+17) 4 COMPLAINT, НЕПЪЛНО COMPLAINT (тежест ->тежест в сърдечната област), НЕПЪЛЕН sYMPTOM хепатит -> хепатит с, ПРОПУСНАТ SYMPTOM ('са на пик . мехур', 141, 158, 'SYMPTOM'), ПРОПУСНАТ FAMILY_HISTORY ('сестра с са вентрикули', 193, 215, 'FAMILY_HISTORY')
+
+18)2 SYMPTOM, 1 NEGATION, 1 FAMILY_HISTORY
+
+19) 3 SYMPTOM, 1 COMPLAINT, нЕПЪЛНО COMPLAINT отоци -> отоци по крайниците, 2 FAMILY_HISTORY
+
+20) 5 COMPLAINT, 
+
+21) 3 COMPLAINT, 1 SYMPTOM
+
+22) ЛИПСВА не съобщава за микционни смущения (иМА САМО ОТРИЦАНИЕТО), ORGAN ВМЕСТО COMPLAINT мътна кървава урина, 1 NO_SYMPTOM, 2 SYMPTOM, 1 NO_COMPLAINT
+
+23)5 COMPLAINT, 1 RISK_FACTOR, 1 NEGATION, 2 NO_RISK_FACTOR, 1 липсва FAMILY_HISTORY, 1 COMPLAINT НЕПЪЛЕН болки -> болки вляво тбс, нА ТЕЗИ 2-ТЕ САМО ОТРИЦАНИЯТА ('без стенокардни кризи', 349, 370, 'NO_SYMPTOM'), ('не се изпуска по нужда', 371, 393, 'NO_COMPLAINT')
+
+24)2 SYMPTOM, 2 COMPLAINT, 1 NEGATION, 2 NO_RISK_FACTOR, пРОПУСНАТ 'родители хипертоници'-'FAMILY_HISTORY', 1 RISK_FACTOR, 1 FAMILY_HISTORY, САМО ОТРИЦАНИЯТА НА ('не се движи пеша', 271, 287, 'RISK_FACTOR'), ('не употребява мазни и солени храни', 301, 335, 'NO_RISK_FACTOR'),
+
+25)5 COMPLAINT, ЛИПСВА 1 COMPLAINT - загубил апетит, НЕПЪЛЕН SYMPTOM пикочен мехур -> са на пикочен мехур
+
+26) 1 COMPLAINT, 3 NO_COMPLAINT, 1 NO_SYMPTOM, 1 SYMPTOM, NO_SYMPTOM САМО ОТРИЦАНИЕТО НАМИРА (НЕ ->не повишава кръвното налягане)
+
+27) 4 SYMPTOM, ('няма жажда', 267, 277, 'NO_COMPLAINT'), ('уриниране', 286, 295, 'ORGAN') ->('няма жажда често и уриниране', 267, 295, 'NO_COMPLAINT'), 2 NO_COMPLAINT, лиПСВА САМО ОРГАНА ('краката', 325, 332, 'ORGAN')->('краката тръпнат', 325, 340, 'COMPLAINT'), 1 COMPLAINT
+
+28)3 SYMPTOM, 1 NEGATION, ('нервната и сърдечносъдовата система', 337, 372, 'COMPLAINT') ->('липсват оплаквания от страна на нервната и сърдечносъдовата система', 305, 372, 'NO_COMPLAINT'), 1 COMPLAINT,  НЕПЪЛНО ('подуване', 422, 430, 'COMPLAINT')->('подуване на пръстите', 422, 442, 'COMPLAINT'), ЛИПСВА ('трудно раздвижване', 445, 463, 'COMPLAINT')
+
+29) 1 COMPLAINT, грешно ('затруднена дефекация', 36, 56, 'ORGAN') -> ('затруднена дефекация', 36, 56, 'COMPLAINT'),  само органите  ('ясна кръв', 71, 80, 'ORGAN'), ('дефекация', 86, 95, 'ORGAN') -> ('изтичане на ясна кръв след дефекация', 59, 95, 'COMPLAINT'), лИПСВА ('изтъняване на изпражненията', 109, 136, 'COMPLAINT'), НЕПЪЛНО SYMPTOM карцином -> карцином на колон десценднес, ЛИПСВА ('стеноза', 230, 237, 'SYMPTOM')
+
+30) 1 NEGATION, 2 COMPLAINT, 1 SYMPTOM, 1 FAMILY_HISTORY, лИПСВА FAMILY_HISTORY ИМА САМО орГАНА ОТ НЕГО ('баща починал от злокачествено заболяване на белия дроб', 255, 309, 'FAMILY_HISTORY')
